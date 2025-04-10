@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import ResumesList from "./components/ResumesList";
+import ResumeDetails from "./components/ResumeDetails";
+import VacancyList from "./components/VacancyList";
+import VacancyDetails from "./components/VacancyDetails";
+import VacancyCreate from "./components/VacancyCreate";
+import UploadResume from "./components/UploadResume";
+import "./App.css"
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+      <header>
+        <div className="container header-inner">
+          <h1 className="logo">Sandbox</h1>
+          <nav className="nav">
+            <Link className="nav-link" to="/">Резюме</Link>
+            <Link className="nav-link" to="/vacancies">Вакансии</Link>
+            <Link className="nav-link" to="/vacancies/new">Новая вакансия</Link>
+            <Link className="nav-link" to="/upload">Загрузить резюме</Link>
+          </nav>
+        </div>
       </header>
-    </div>
+
+
+      <main className="container">
+        <Routes>
+          <Route path="/" element={<ResumesList />} />
+          <Route path="/resumes/:id" element={<ResumeDetails />} />
+          <Route path="/upload" element={<UploadResume />} />
+          <Route path="/vacancies" element={<VacancyList />} />
+          <Route path="/vacancies/new" element={<VacancyCreate />} />
+          <Route path="/vacancies/:id" element={<VacancyDetails />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
-
-export default App;

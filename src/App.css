@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+/* Общие стили для контейнера */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Хедер */
+header {
+  background-color: #1f1f2e;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-inner {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+/* Логотип */
+.logo {
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Навигация */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #cfcfe6;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffffff;
+  border-bottom: 2px solid #7a78ff;
+}
+
+/* Контент страницы */
+main {
+  padding: 20px 0;
+  background-color: #ffffff;
+  min-height: calc(100vh - 60px);
 }

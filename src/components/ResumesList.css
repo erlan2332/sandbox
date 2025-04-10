@@ -1,0 +1,65 @@
+.resumes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background-color: #fafafa;
+  }
+
+  .card {
+    margin-top: 20px;
+  }
+  
+  .resume-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    width: 320px;
+    padding: 1.75rem;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .resume-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+  }
+  
+  .resume-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #111;
+  }
+  
+  .resume-card p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+  
+  .skills-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+  }
+  
+  .skill-pill {
+    background-color: #f0f0f0;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+    color: #333;
+    transition: background-color 0.2s ease;
+  }
+  
+  .skill-pill:hover {
+    background-color: #e0e0e0;
+  }
+  

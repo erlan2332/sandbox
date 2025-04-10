@@ -1,0 +1,65 @@
+.progress-indicator {
+  background-color: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.progress-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.progress-header p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.progress-percent {
+  text-align: right;
+}
+
+.percent-value {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.delta {
+  background-color: #1f2937;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin-left: 0.25rem;
+  color: #38bdf8;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.bar-segment {
+  width: 6px;
+  height: 20px;
+  background-color: #374151;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.bar-segment.filled {
+  background-color: #fff;
+}
